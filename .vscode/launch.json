@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name":              "debug:sandbox",
+        "type":              "node",
+        "request":           "launch",
+        "protocol":          "inspector",
+        "program":           "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js",
+        "cwd":               "${workspaceRoot}",
+        "stopOnEntry":       false,
+        "preLaunchTask":     null,
+        "runtimeExecutable": null,
+        "sourceMaps":        false,
+        "port":              9000,
+        "console":           "internalConsole",
+        "restart":           true,
+        "args":              [
+            "--debug-brk",
+            "--nolazy",
+            "--inspect=localhost:9000",
+            "${workspaceRoot}/_scratchpad/index.js"
+        ],
+        "env": {
+            "NODE_ENV": "development"
+        }
+    }, {
+        "type":              "node",
+        "request":           "launch",
+        "name":              "test:debug",
+        "runtimeExecutable": "npm",
+        "windows":           {
+            "runtimeExecutable": "npm.cmd"
+        },
+        "protocol": "inspector",
+        "runtimeArgs": [
+            "run-script",
+            "test:debug"
+        ],
+        "port": 9000
+    }, {
+        "type":    "node",
+        "request":  "launch",
+        "name":     "test",
+        "program":  "${workspaceRoot}/node_modules/jest-cli/bin/jest.js",
+        "args":     [
+            "--runInBand"
+        ],
+        "runtimeArgs": [
+            "--nolazy"
+        ],
+        "stopOnEntry": false,
+        "cwd":         "${workspaceRoot}",
+        "sourceMaps":  false,
+        "console":     "internalConsole"
+    }]
+}
