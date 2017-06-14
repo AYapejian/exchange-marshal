@@ -1,13 +1,12 @@
 {
-    "name": "exchange-marshal",
-    "version": "0.0.1",
+    "name":        "exchange-marshal",
+    "version":     "0.0.1",
     "description": "Altcoin exchange and services unifier",
-    "main": "_index.js",
-    "author": "Ara Yapejian <ayapejian@gmail.com>",
-    "license": "MIT",
+    "main":        "_index.js",
+    "author":      "Ara Yapejian <ayapejian@gmail.com>",
+    "license":     "MIT",
     "scripts": {
-        "test": "jest",
-        "test:debug": "nodemon --nolazy node_modules/jest-cli/bin/jest.js --runInBand"
+        "test": "ava"
     },
     "ava": {
         "files":                 ["**/*.spec.js"],
@@ -18,21 +17,21 @@
         "powerAssert":           true
     },
     "devDependencies": {
-        "ava": "^0.19.1",
+        "ava":               "^0.19.1",
         "eslint-plugin-ava": "^4.2.0",
-        "nodemon": "^1.11.0"
+        "nodemon":           "^1.11.0"
     },
     "dependencies": {
         "@you21979/bittrex.com": "0.0.4",
-        "aigle": "^1.4.2",
-        "coinbase": "2.0.6",
-        "debug": "^2.6.8",
-        "decimal.js": "7.2.1",
-        "dotenv": "^4.0.0",
-        "eslint": "^4.0.0",
-        "gdax": "0.4.2",
-        "js-object-transform": "^1.1.1-0",
-        "kraken-api": "0.1.7",
-        "poloniex-api-node": "1.1.1"
+        "aigle":                 "^1.4.2",
+        "coinbase":              "2.0.6",
+        "debug":                 "^2.6.8",
+        "decimal.js":            "7.2.1",
+        "dotenv":                "^4.0.0",
+        "eslint":                "^4.0.0",
+        "gdax":                  "0.4.2",
+        "js-object-transform":   "^1.1.1-0",
+        "kraken-api":            "0.1.7",
+        "poloniex-api-node":     "1.1.1"
     }
 }
